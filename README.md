@@ -12,9 +12,9 @@
 
 # Project description
 
-In 2019, the [global social penetration rate](https://www.statista.com/statistics/269615/social-network-penetration-by-region/) reached 45 percent, with East Asia and North America both having the highest penetration rate at 70 percent, followed by Northern Europe at 67 percent.[Statista](https://www.statista.com/topics/1164/social-networks/)
+In 2019, the [global social penetration rate](https://www.statista.com/statistics/269615/social-network-penetration-by-region/) reached 45 percent, with East Asia and North America both having the highest penetration rate at 70 percent, followed by Northern Europe at 67 percent.([Statista](https://www.statista.com/topics/1164/social-networks/))
 
-74% of consumers rely on social networks to help with their purchasing decisions.[awario](https://awario.com/blog/how-social-networks-influence-74-of-shoppers-for-their-purchasing-decisions-today/)
+74% of consumers rely on social networks to help with their purchasing decisions.([awario](https://awario.com/blog/how-social-networks-influence-74-of-shoppers-for-their-purchasing-decisions-today/))
 
 So, targeted advertisements play a key role in achieveing better returns on the money invested on ads. Various methos like attribution modeling, sentiment analysis, intent classification etc are combined to understand the users. Before using these different social media platforms, understanding the pulse of the users is quite important and this applies to every industry.
 
