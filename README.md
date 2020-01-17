@@ -36,7 +36,7 @@ Due to the limitations of standard twitter API, I used this [archive](https://ar
 <img align="left" src="https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/amazon-s3.png" width=140, height=45>
 <img align="left" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width=140, height=45><br />
 
-# Architecture
+# Architecture{align=left}
 ![Architecture](https://github.com/Abhinavkaitha/Data-Engineering-Capstone-Project/blob/master/Images/Screenshot%202020-01-16%20at%204.44.19%20PM.png)
 # Airflow pipeline
 
