@@ -16,7 +16,7 @@
 # Database Schema
 
 # Architecture
-
+![Architecture](https://github.com/Abhinavkaitha/Data-Engineering-Capstone-Project/blob/master/Images/Screenshot%202020-01-16%20at%204.44.19%20PM.png)
 # Airflow pipeline
 
 # Challenges
