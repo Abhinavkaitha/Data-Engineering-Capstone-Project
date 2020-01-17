@@ -1,6 +1,6 @@
 # Table of Contents
 1. [Project description](#Project-description)
-2. [Data sources](#Data-sources)
+2. [About the data](#About-the-data)
 3. [Database Schema](#Database-Schema)
 4. [Architecture](#Architecture)
 5. [Airflow pipeline](#Airflow-pipeline)
@@ -11,7 +11,7 @@
 
 # Project description
 
-# Data sources
+# About the data
 
 # Database Schema
 
