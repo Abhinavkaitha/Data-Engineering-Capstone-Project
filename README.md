@@ -43,9 +43,10 @@ Due to the limitations of standard twitter API, I used this [archive](https://ar
 # Airflow pipeline
 
 # Challenges
+- Storage and reading speeds optimised by Apache Parquet
+
 - Data increase by 100x.
     - Redshift: read vs write
-
 
 - Updating the data regularly
 
