@@ -1,13 +1,13 @@
 # Table of Contents
 1. [Project description](#Project-description)
-2. [Data sources](#Data sources)
-3. [Database Schema](#Database Schema)
+2. [Data sources](#Data-sources)
+3. [Database Schema](#Database-Schema)
 4. [Architecture](#Architecture)
-5. [Airflow pipeline](#Airflow pipeline)
+5. [Airflow pipeline](#Airflow-pipeline)
 6. [Challenges](#Challenges)
-7. [Project File Structure](#Project File Structure)
-8. [How to run the program](#How to run the program)
-9. [Future Work](#Future Work)
+7. [Project File Structure](#Project-File-Structure)
+8. [How to run the program](#How-to-run-the-program)
+9. [Future Work](#Future-Work)
 
 # Project description
 
