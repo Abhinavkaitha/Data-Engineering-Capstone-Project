@@ -6,7 +6,7 @@
 5. [Airflow pipeline](#Airflow-pipeline)
 6. [Challenges](#Challenges)
 7. [Project File Structure](#Project-File-Structure)
-8. [How to run the program](#How-to-run-the-program)
+8. [Run the project](#Run-the-project)
 9. [Future Work](#Future-Work)
 
 # Project description
@@ -30,6 +30,13 @@
 
 # Project File Structure
 
-# How to run the program
+# Run the project
 
 # Future Work
+
+# Technologies used
+<img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" width=108>
+<img align="left" src="https://upload.wikimedia.org/wikipedia/en/2/29/Apache_Spark_Logo.svg" width=108>
+<img align="left" src="https://ncrocfer.github.io/images/airflow-logo.png" width=108>
+<img align="left" src="https://cdn.sisense.com/wp-content/uploads/aws-redshift-connector.png" width=108>
+<img align="left" src="https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/amazon-s3.png" width=140, height=45>
