@@ -2,13 +2,13 @@
 1. [Project description](#Project-description)
 2. [About the data](#About-the-data)
 3. [Database Schema](#Database-Schema)
-4. [Architecture](#Architecture)
-5. [Airflow pipeline](#Airflow-pipeline)
-6. [Challenges](#Challenges)
-7. [Project File Structure](#Project-File-Structure)
-8. [Run the project](#Run-the-project)
-9. [Future Work](#Future-Work)
-10. [Technologies used](#Technologies-used)
+4. [Technologies used](#Technologies-used)
+5. [Architecture](#Architecture)
+6. [Airflow pipeline](#Airflow-pipeline)
+7. [Challenges](#Challenges)
+8. [Project File Structure](#Project-File-Structure)
+9. [Run the project](#Run-the-project)
+10. [Future Work](#Future-Work) 
 
 # Project description
 
@@ -27,6 +27,16 @@ This project focuses on the challenging phases of the Data Engineering part of t
 Due to the limitations of standard twitter API, I used this [archive](https://archive.org/details/twitterstream?and%5B%5D=year%3A%222018%22) to fetch the twitter data. 
 
 # Database Schema
+
+# Technologies used
+<img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" width=108>
+<img align="left" src="https://upload.wikimedia.org/wikipedia/en/2/29/Apache_Spark_Logo.svg" width=108>
+<img align="left" src="https://ncrocfer.github.io/images/airflow-logo.png" width=108>
+<img align="left" src="https://cdn.sisense.com/wp-content/uploads/aws-redshift-connector.png" width=108>
+<img align="left" src="https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/amazon-s3.png" width=140, height=45>
+<img align="left" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width=140, height=45>
+
+# Reasons for choosing the above technologies
 
 # Architecture
 ![Architecture](https://github.com/Abhinavkaitha/Data-Engineering-Capstone-Project/blob/master/Images/Screenshot%202020-01-16%20at%204.44.19%20PM.png)
@@ -48,11 +58,3 @@ Due to the limitations of standard twitter API, I used this [archive](https://ar
 # Future Work
 
 I want to extend this project to analyze the real time data using frame works like Apache Kafka. Since this project focuses on the Data Engineering part, I used simple machine learning models on text data to acheive the results. This can be extended to different data types like emojis, images and videos by buiding a robust database and analyze the data using deep learning techniques.
-
-# Technologies used
-<img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" width=108>
-<img align="left" src="https://upload.wikimedia.org/wikipedia/en/2/29/Apache_Spark_Logo.svg" width=108>
-<img align="left" src="https://ncrocfer.github.io/images/airflow-logo.png" width=108>
-<img align="left" src="https://cdn.sisense.com/wp-content/uploads/aws-redshift-connector.png" width=108>
-<img align="left" src="https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/amazon-s3.png" width=140, height=45>
-<img align="left" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width=140, height=45>
