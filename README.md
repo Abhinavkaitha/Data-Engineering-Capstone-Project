@@ -8,7 +8,6 @@
 7. [Project File Structure](#Project-File-Structure)
 8. [Run the project](#Run-the-project)
 9. [Future Work](#Future-Work)
-
 10.[Technologies used](#Technologies-used)
 
 # Project description
