@@ -24,7 +24,7 @@ while fetching the tweets from twitter, we get the time stamp and also the locat
 
 This project focuses on the challenging phases of the Data Engineering part of the above mentioned analysis.
 # About the data
-Due to the limitations of standard twitter API, I used thi [archive](https://archive.org/details/twitterstream?and%5B%5D=year%3A%222018%22) to fetch the twitter data. 
+Due to the limitations of standard twitter API, I used this [archive](https://archive.org/details/twitterstream?and%5B%5D=year%3A%222018%22) to fetch the twitter data. 
 
 # Database Schema
 
