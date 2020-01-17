@@ -41,5 +41,5 @@
 <img align="left" src="https://ncrocfer.github.io/images/airflow-logo.png" width=108>
 <img align="left" src="https://cdn.sisense.com/wp-content/uploads/aws-redshift-connector.png" width=108>
 <img align="left" src="https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/amazon-s3.png" width=140, height=45>
-<img align="left" src="https://en.wikipedia.org/wiki/Apache_Parquet#/media/File:Apache_Parquet_Logo.svg" width=140, height=45>
+<img align="left" src="https://www.wikiwand.com/en/Apache_Parquet" width=140, height=45>
 <img align="left" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width=140, height=45>
