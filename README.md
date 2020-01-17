@@ -1,5 +1,5 @@
 # Table of Contents
-1. [Project description](#Project\ description)
+1. [Project description](#Project-description)
 2. [Data sources](#Data sources)
 3. [Database Schema](#Database Schema)
 4. [Architecture](#Architecture)
