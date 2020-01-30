@@ -12,5 +12,5 @@ for dirpath, dirs, files in os.walk(my_path):
         new_name = fname[25:].replace("/", "_")
         count += 1
         os.system("mv " + fname + " " + "/mys3bucket/twitter_bz2_dump/" + new_name)
-        if count%1000 == 0:
+        if count % 1000 == 0:
             print("Number of files moved:", count)
