@@ -10,7 +10,7 @@ sqlcontext = SQLContext(sc)
 def reduce_dataframe_to_essential_fields(df):
     return df.select(col('created_at'),col('text'),col('place.name').alias('location')) 
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 	folder_data = sqlcontext.read.json("s3a://tone-of-the-nation/back_up/twitter_bz2/twitter-2018-05-02/2018/05/02/08")
 
 	folder_data = reduce_dataframe_to_essential_fields(folder_data)
