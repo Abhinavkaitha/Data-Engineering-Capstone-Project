@@ -20,7 +20,7 @@ url = 'postgresql://{}:{}@{}:{}/{}'.format(user,password,host,port,db)
 
 con = create_engine(url)
 
-features = ['Coca-Cola','Pepsi','Danone']
+features = ['Coca-Cola','Pepsi']
 hours = list(range(1,25))
 
 app.layout = html.Div([
@@ -74,7 +74,7 @@ def update_graph(company_name, hour_of_the_day,start_date,end_date):
     colorbar_title = 'Sentiment')
                                  ],
     'layout':go.Layout(
-    title_text = 'Facebook VS Twitter',
+    title_text = 'Tone of the Nation',
     geo_scope='usa')
     }
 
