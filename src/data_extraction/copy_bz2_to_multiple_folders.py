@@ -18,4 +18,4 @@ def copy_bz2_to_one_folder(my_path):
                 os.system('mkdir /mys3bucket/new_twitter/' + str(folder))
 
 if __name__ == '__main__':
-    copy_bz2_to_one_folder(my_path = '/mys3bucket/twitter_bz2_dump')
+    copy_bz2_to_one_folder(my_path = '/mys3bucket/twitter_bz2')

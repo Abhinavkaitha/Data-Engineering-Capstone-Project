@@ -91,7 +91,7 @@ def blank_as_null(x):
     return when(col(x) != " ", col(x)).otherwise("NULL")
 
 
-def identify_company(word_list, tweet_data):
+def identify_company(words_list, tweet_data):
     tweet_data = tweet_data.withColumn(
         'company',
         psf.regexp_extract('text', '(?=^|\s)(' + '|'.join(words_list) + ')(?=\s|$)', 0))
@@ -128,57 +128,57 @@ def write_row(row, conn):
         conn.rollback()
 
 
-if __name__ == '__main__':
-    tweets_csv = spark.read.csv('s3a://tone-of-the-nation/train.csv', inferSchema=True, header=True)
-    data_with_useful_columns = tweets_csv.select(col("SentimentText").alias('text'),
-                                                 col("Sentiment").cast("Int").alias("label"))
+#if __name__ == '__main__':
+tweets_csv = spark.read.csv('s3a://tone-of-the-nation/train.csv', inferSchema=True, header=True)
+data_with_useful_columns = tweets_csv.select(col("SentimentText").alias('text'),
+                                             col("Sentiment").cast("Int").alias("label"))
 
-    data_with_no_punc = remove_punct(data_with_useful_columns, 'label')
+data_with_no_punc = remove_punct(data_with_useful_columns, 'label')
 
-    Numeric_data = mini_pipe(data_with_no_punc)
+Numeric_data = mini_pipe(data_with_no_punc)
 
-    trainingData , testingData = data_split(Numeric_data)
+trainingData , testingData = data_split(Numeric_data)
 
-    model_logistic = logistic_regression(traiingData)
+model_logistic = logistic_regression(trainingData)
 
-    get_validation(model_logistic, testingData)
+get_validation(model_logistic, testingData)
 
-    lsvc_model = svc(trainingData)
+lsvc_model = svc(trainingData)
 
-    get_validation(lsvc_model, testingData)
+get_validation(lsvc_model, testingData)
 
-    tweet_data = spark.read.format("parquet").load("s3a://tone-of-the-nation/new_parque")
+tweet_data = spark.read.format("parquet").load("s3a://tone-of-the-nation/twitter_parque/1")
 
-    tweet_data = add_new_columns(tweet_data)
+tweet_data = add_new_columns(tweet_data)
 
-    drop_cols = ['created_at', 'date_', 'month', 'year', 'time_stamp']
-    tweet_data = tweet_data.drop(*drop_cols)
+drop_cols = ['created_at', 'date_', 'month', 'year', 'time_stamp']
+tweet_data = tweet_data.drop(*drop_cols)
 
-    words_list1 = ['Coke', 'coke', 'Cola', 'cola', 'CocaCola', 'cocacola', 'Coca-Cola', 'coca-cola']
+words_list1 = ['Coke', 'coke', 'Cola', 'cola', 'CocaCola', 'cocacola', 'Coca-Cola', 'coca-cola']
 
-    words_list2 = ['Pepsi', 'pepsi']
+words_list2 = ['Pepsi', 'pepsi']
 
-    tweet_data = identify_company(words_list1 + words_list2, tweet_data)
+tweet_data = identify_company(words_list1 + words_list2, tweet_data)
 
-    tweet_data = rename_companies(words_list1, words_list2, tweet_data)
+tweet_data = rename_companies(words_list1, words_list2, tweet_data)
 
-    Tweet_data = tweet_data.withColumn("company", blank_as_null("company"))
+Tweet_data = tweet_data.withColumn("company", blank_as_null("company"))
 
-    tweet_clean = Tweet_data.select('location', 'day', 'hour', 'date', 'company',
-                                    (lower(regexp_replace('text', "[^a-zA-Z\\s]", "")).alias('text')))
+tweet_clean = Tweet_data.select('location', 'day', 'hour', 'date', 'company',
+                                (lower(regexp_replace('text', "[^a-zA-Z\\s]", "")).alias('text')))
 
-    Numeric_data = mini_pipe(tweet_clean)
+Numeric_data = mini_pipe(tweet_clean)
 
-    prediction_svm = lsvcModel.transform(Numeric_data)
-    predictionFinal_svm = prediction_svm.select("MeaningfulWords", "prediction", 'date', 'company', 'day', 'hour',
-                                                'location', 'MeaningfulWords', 'features')
+prediction_svm = lsvc_model.transform(Numeric_data)
+predictionFinal_svm = prediction_svm.select("MeaningfulWords", "prediction", 'date', 'company', 'day', 'hour',
+                                            'location', 'MeaningfulWords', 'features',"rawPrediction")
 
-    slicer = VectorSlicer(inputCol="rawPrediction", outputCol="tone", indices=[1])
-    result = slicer.transform(predictionFinal_svm)
+slicer = VectorSlicer(inputCol="rawPrediction", outputCol="tone", indices=[1])
+result = slicer.transform(predictionFinal_svm)
 
-    drop_cols = ['MeaningfulWords', 'features', 'rawPrediction', 'prediction']
-    result = result.drop(*drop_cols)
+drop_cols = ['MeaningfulWords', 'features', 'rawPrediction', 'prediction']
+result = result.drop(*drop_cols)
 
-    for row in result.rdd.collect():
-        write_row(row, conn)
-    print("Data is pushed to database")
+for row in result.rdd.collect():
+    write_row(row, conn)
+print("Data is pushed to database")
