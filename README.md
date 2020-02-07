@@ -2,13 +2,11 @@
 1. [Project description](#Project-description)
 2. [About the data](#About-the-data)
 3. [Database Schema](#Database-Schema)
-4. [Technologies used](#Technologies-used)
-5. [Architecture](#Architecture)
-6. [Airflow pipeline](#Airflow-pipeline)
-7. [Challenges](#Challenges)
-8. [Project File Structure](#Project-File-Structure)
-9. [Run the project](#Run-the-project)
-10. [Future Work](#Future-Work) 
+4. [Architecture](#Architecture)
+5. [Challenges](#Challenges)
+6. [Project File Structure](#Project-File-Structure)
+7. [Run the project](#Run-the-project)
+8. [Future Work](#Future-Work) 
 
 # Project description
 
@@ -29,18 +27,8 @@ Due to the limitations of standard twitter API, I used this [archive](https://ar
 
 # Database Schema
 
-# Technologies used
-<img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/512px-Amazon_Web_Services_Logo.svg.png" width=108>
-<img align="left" src="https://upload.wikimedia.org/wikipedia/en/2/29/Apache_Spark_Logo.svg" width=108>
-<img align="left" src="https://ncrocfer.github.io/images/airflow-logo.png" width=108>
-<img align="left" src="https://cdn.sisense.com/wp-content/uploads/aws-redshift-connector.png" width=108>
-<img align="left" src="https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/amazon-s3.png" width=140, height=45>
-<img align="left" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width=140, height=45><br />
-
 # Architecture
-<img align="left" src="https://github.com/Abhinavkaitha/Data-Engineering-Capstone-Project/blob/master/Images/Screenshot%202020-01-16%20at%204.44.19%20PM.png" >
-
-# Airflow pipeline
+<img align="left" src="https://https://github.com/Abhinavkaitha/Data-Engineering-Capstone-Project/blob/master/Images/Architecture.png" >
 
 # Challenges
 - Storage and reading speeds optimised by Apache Parquet
