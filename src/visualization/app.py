@@ -45,7 +45,7 @@ app.layout = html.Div([
             min_date_allowed=datetime(2018, 5, 2),
             max_date_allowed=datetime(2018, 10, 31),
             start_date=datetime(2018, 5, 2),
-            end_date=datetime(2018, 10, 3)
+            end_date=datetime(2018, 5, 3)
         )
     ], style={'display': 'inline-block'}),
 
@@ -95,4 +95,4 @@ def update_graph(company_name, hour_of_the_day, start_date, end_date, day):
 
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(port=80,host='0.0.0.0')
