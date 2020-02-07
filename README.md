@@ -26,19 +26,23 @@ This project focuses on the challenging phases of the Data Engineering part of t
 Due to the limitations of standard twitter API, I used this [archive](https://archive.org/details/twitterstream?and%5B%5D=year%3A%222018%22) to fetch the twitter data. 
 
 # Database Schema
+<img align="left" src="https://github.com/Abhinavkaitha/Data-Engineering-Capstone-Project/blob/master/Images/DB_table.png?raw=true" >
 
 # Architecture
-<img align="left" src="https://https://github.com/Abhinavkaitha/Data-Engineering-Capstone-Project/blob/master/Images/Architecture.png" >
+<img align="left" src="https://raw.githubusercontent.com/Abhinavkaitha/Data-Engineering-Capstone-Project/master/Images/Architecture.png" >
 
 # Challenges
-- Storage and reading speeds optimised by Apache Parquet
+- Downloading and extrating 233 GB of twitter data from archive.org took forever.
+	- Solution: Mount S3 to EC2 using S3fs fuse file system. Now S3 acts like a local directory to EC2 and you can dowload any amount of data directly to S3 from EC2. The configuration of EC2 can be as low as 1GB RAM.
 
-- Data increase by 100x.
-    - Redshift: read vs write
+- Preprocessing 233 GB JSON files
+    - There are 36 columns in each JSON files, of which only 
 
 - Updating the data regularly
+	- Airflow DAG can be triggered everyday to take into account the newly updated data.
 
 - Make it available to 100+ people
+	- The final Dash app can be deployed on EC2 or aws beanstalk(which uses EC2 in background) to share the app with anyone. Currently I am using EC2 instance directly to deploy it.
 
 # Project File Structure
 
