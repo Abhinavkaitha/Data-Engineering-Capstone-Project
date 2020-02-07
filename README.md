@@ -1,12 +1,11 @@
 # Table of Contents
 1. [Project description](#Project-description)
 2. [About the data](#About-the-data)
-3. [Database Schema](#Database-Schema)
-4. [Architecture](#Architecture)
+3. [Architecture](#Architecture)
+4. [Database Schema](#Database-Schema)
 5. [Challenges](#Challenges)
-6. [Project File Structure](#Project-File-Structure)
-7. [Run the project](#Run-the-project)
-8. [Future Work](#Future-Work) 
+6. [Repo Structure](#Repo-Structure)
+7. [Future Work](#Future-Work) 
 
 # Project description
 
@@ -25,11 +24,11 @@ This project focuses on the challenging phases of the Data Engineering part of t
 # About the data
 Due to the limitations of standard twitter API, I used this [archive](https://archive.org/details/twitterstream?and%5B%5D=year%3A%222018%22) to fetch the twitter data. 
 
-# Database Schema
-<img align="left" src="https://github.com/Abhinavkaitha/Data-Engineering-Capstone-Project/blob/master/Images/DB_table.png?raw=true" >
-
 # Architecture
 <img align="left" src="https://raw.githubusercontent.com/Abhinavkaitha/Data-Engineering-Capstone-Project/master/Images/Architecture.png" >
+
+# Database Schema
+<img align="left" src="https://github.com/Abhinavkaitha/Data-Engineering-Capstone-Project/blob/master/Images/DB_table.png?raw=true" >
 
 # Challenges
 - Downloading and extrating 233 GB of twitter data from archive.org took forever.
@@ -44,9 +43,7 @@ Due to the limitations of standard twitter API, I used this [archive](https://ar
 - Make it available to 100+ people
 	- The final Dash app can be deployed on EC2 or aws beanstalk(which uses EC2 in background) to share the app with anyone. Currently I am using EC2 instance directly to deploy it.
 
-# Project File Structure
-
-# Run the project
+# Repo Structure
 
 # Future Work
 
