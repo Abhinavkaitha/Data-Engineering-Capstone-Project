@@ -87,7 +87,7 @@ def update_graph(company_name, hour_of_the_day, start_date, end_date, day):
     locations = states['location'],
     z = states['tone'],
     locationmode = 'USA-states',
-    colorscale = 'Reds',
+    colorscale = 'Blues',
     colorbar_title = 'Sentiment')
                                  ],
     'layout': go.Layout(
