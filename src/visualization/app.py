@@ -84,8 +84,8 @@ def update_graph(company_name, hour_of_the_day, start_date, end_date, day):
     valid_states = list(mean_df.index)
     return {
         'data':[go.Choropleth(
-    locations = states['location'],
-    z = states['tone'],
+    locations = valid_states,
+    z = mean_tone,
     locationmode = 'USA-states',
     colorscale = 'Blues',
     colorbar_title = 'Sentiment')
