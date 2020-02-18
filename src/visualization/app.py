@@ -53,7 +53,7 @@ app.layout = html.Div([
         dcc.Dropdown(
             id='hour',
             options=[{'label': i, 'value': i} for i in hours],
-            value=14
+            value1=14
         )
     ], style={'width': '18%', 'display': 'inline-block'}),
 
@@ -61,7 +61,7 @@ app.layout = html.Div([
         dcc.Dropdown(
             id='day',
             options=[{'label': i, 'value': i} for i in days],
-            value='Thu'
+            value2='Thu'
         )
     ], style={'width': '18%', 'display': 'inline-block'}),
 
@@ -72,10 +72,10 @@ app.layout = html.Div([
 @app.callback(
     Output('feature-graphic', 'figure'),
     [Input('company', 'value'),
-     Input('hour', 'value'),
-    Input('my_date_picker','end_date'),
+     Input('hour', 'value1'),
+    Input('my_date_picker','start_date'),
      Input('my_date_picker','end_date'),
-     Input('day','value')])
+     Input('day','value2')])
 def update_graph(company_name, hour_of_the_day, start_date, end_date, day):
 
     states = pd.read_sql("SELECT * FROM tone1 WHERE tone1.date BETWEEN '{}' AND '{}' AND tone1.company = '{}' AND tone1.hour={} AND tone1.day='{}'".format(start_date, end_date, company_name, hour_of_the_day, day), con)
