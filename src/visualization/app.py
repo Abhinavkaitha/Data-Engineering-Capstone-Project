@@ -76,6 +76,7 @@ app.layout = html.Div([
     Input('my_date_picker','start_date'),
      Input('my_date_picker','end_date'),
      Input('day','value')])
+
 def update_graph(company_name, hour_of_the_day, start_date, end_date, day):
 
     states = pd.read_sql("SELECT * FROM tone1 WHERE tone1.date BETWEEN '{}' AND '{}' AND tone1.company = '{}' AND tone1.hour={} AND tone1.day='{}'".format(start_date, end_date, company_name, hour_of_the_day, day), con)
@@ -94,7 +95,6 @@ def update_graph(company_name, hour_of_the_day, start_date, end_date, day):
     title_text = 'Tone of the Nation',
     geo_scope = 'usa')
     }
-
 
 if __name__ == '__main__':
     app.run_server(port=80,host='0.0.0.0')
