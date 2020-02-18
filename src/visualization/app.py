@@ -78,7 +78,7 @@ app.layout = html.Div([
      Input('day','value')])
 def update_graph(company_name, hour_of_the_day, start_date, end_date, day):
 
-    states = pd.read_sql("SELECT * FROM tone WHERE tone.date BETWEEN '{}' AND '{}' AND tone.company = '{}' AND tone.hour={} AND tone.day='{}'".format(start_date, end_date, company_name, hour_of_the_day, day), con)
+    states = pd.read_sql("SELECT * FROM tone1 WHERE tone1.date BETWEEN '{}' AND '{}' AND tone1.company = '{}' AND tone1.hour={} AND tone1.day='{}'".format(start_date, end_date, company_name, hour_of_the_day, day), con)
     mean_df = states.groupby('location').mean()
     mean_tone = mean_df['tone']
     valid_states = list(mean_df.index)
