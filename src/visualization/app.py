@@ -65,7 +65,7 @@ app.layout = html.Div([
         )
     ], style={'width': '18%', 'display': 'inline-block'}),
 
-        dcc.Graph(id='feature-graphic'),
+        dcc.Graph(style={'height': '700px'},id='feature-graphic'),
     html.H3(children = '0 --> Negative  1--> Positive',style={'textAlign':'right'})
     ], style={'padding': 10})
 
